@@ -21,6 +21,15 @@ namespace Stacks
             {
                 Console.WriteLine(title);
             }
+
+            string topItem = books.Pop();
+            Console.WriteLine("\r\nTop item is " + topItem);
+
+            Console.WriteLine("\r\nALL BOOKS after popping: ");
+            foreach (string title in books)
+            {
+                Console.WriteLine(title);
+            }
         }
     }
 }
