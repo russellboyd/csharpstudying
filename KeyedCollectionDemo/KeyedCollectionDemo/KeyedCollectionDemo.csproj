@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E7CEE6D5-519F-4CF0-94FF-112A71ACE727}</ProjectGuid>
+    <ProjectGuid>{F78A3CB7-C173-4F5E-84DF-0D7590E6C9E9}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SortedWithComparer</RootNamespace>
-    <AssemblyName>SortedWithComparer</AssemblyName>
+    <RootNamespace>KeyedCollectionDemo</RootNamespace>
+    <AssemblyName>KeyedCollectionDemo</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
