@@ -16,7 +16,7 @@ namespace Grades
             synth.Speak("Hello, this is the grade book program");
 
             GradeBook book = new GradeBook();
-
+            c
             book.NameChanged += new NameChangedDelegate(OnNameChanged);
             book.NameChanged += new NameChangedDelegate(OnNameChanged2);
             book.NameChanged = null;
