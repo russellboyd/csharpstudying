@@ -1,0 +1,4 @@
+Enumerators
+
+-Enumerators can't modify collections, they can only read.
+-
