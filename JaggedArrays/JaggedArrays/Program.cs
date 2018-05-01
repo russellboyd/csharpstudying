@@ -11,6 +11,11 @@ namespace JaggedArrays
         static void Main(string[] args)
         {
             float[][] tempsGrid = new float[4][];
+            Console.WriteLine("Rank is " + tempsGrid.Rank);
+            Console.WriteLine("Length is " + tempsGrid.Length);
+
+
+
             for (int x = 0; x < 4; x++)
             {
                 tempsGrid[x] = new float[3];
