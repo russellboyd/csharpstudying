@@ -22,8 +22,6 @@ namespace EqualInts
 
             bool itfCmp = ((IComparable<int>)three == (IComparable<int>)threeAgain);
             Console.WriteLine(string.Format("Compare interfaces : {0}", itfCmp));
-
-
         }
     }
 }

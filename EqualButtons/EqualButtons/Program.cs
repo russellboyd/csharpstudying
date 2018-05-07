@@ -16,7 +16,17 @@ namespace EqualButtons
             Button button2 = new Button();
             button2.Text = "Click me now!";
 
-            Console.WriteLine(button1 == button2);
+            Console.WriteLine("Operator: " + AreButtonsEqualOp(button1, button2));
+            Console.WriteLine("Method: " + AreButtonsEqualMethod(button1, button2));
+        }
+        static bool AreButtonsEqualOp(Button x, Button y)
+        {
+            return x == y;
+        }
+
+        static bool AreButtonsEqualMethod(Button x, Button y)
+        {
+            return x.Equals(y);
         }
     }
 }
