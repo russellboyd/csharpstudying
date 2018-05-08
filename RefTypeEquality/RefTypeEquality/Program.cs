@@ -12,9 +12,15 @@ namespace RefTypeEquality
         {
             Food apple = new Food("apple", FoodGroup.Fruit);
             CookedFood stewedApple = new CookedFood("stewed", "apple", FoodGroup.Fruit);
+            CookedFood bakedApple = new CookedFood("baked", "apple", FoodGroup.Fruit);
+            CookedFood stewedApple2 = new CookedFood("stewed", "apple", FoodGroup.Fruit);
+            Food apple2 = new Food("apple", FoodGroup.Fruit);
 
-            Console.WriteLine(apple);
-            Console.WriteLine(stewedApple);
+            DisplayWhetherEqual(apple, stewedApple);
+            DisplayWhetherEqual(stewedApple, bakedApple);
+            DisplayWhetherEqual(stewedApple, stewedApple2);
+            DisplayWhetherEqual(apple, apple2);
+            DisplayWhetherEqual(apple, apple);
         }
 
         static void DisplayWhetherEqual(Food food1, Food food2)
