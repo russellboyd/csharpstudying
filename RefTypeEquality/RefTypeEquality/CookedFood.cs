@@ -6,8 +6,36 @@ using System.Threading.Tasks;
 
 namespace RefTypeEquality
 {
-    public sealed class CookedFood : Food
+    public sealed class CookedFood : Food, IEquatable<CookedFood>
     {
+        public bool Equals(CookedFood other)
+        {
+            if (!base.Equals(other)) return false;
+            return this._cookingMethod == other._cookingMethod;
+        }
+        public static bool operator ==(CookedFood x, CookedFood y)
+        {
+            return object.Equals(x, y);
+        }
+        
+        public static bool operator !=(CookedFood x, CookedFood y)
+        {
+            return !object.Equals(x, y);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(obj, this)) return true;
+            if (!base.Equals(obj)) return false;
+            CookedFood rhs = (CookedFood)obj;
+            return this._cookingMethod == rhs._cookingMethod;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode() ^ this._cookingMethod.GetHashCode();
+        }
+
         private string _cookingMethod;
         public string CookingMethod
         {
