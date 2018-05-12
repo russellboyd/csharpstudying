@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace CalorieCountCompare
 {
-    public struct CalorieCount : IComparable<CalorieCount>
+    public struct CalorieCount : IComparable<CalorieCount>, IEquatable<CalorieCount>, IComparable<>
     {
+        public int CompareTo(object obj)
+        {
+            if (obj == null)
+                throw new ArgumentNullException("obj");
+            if (!(obj is CalorieCount))
+                throw new ArgumentException("Expected CalorieCount instance", "obj");
+            return CompareTo((CalorieCount)obj);
+        }
+
         public int CompareTo(CalorieCount other)
         {
             return this._value.CompareTo(other._value);

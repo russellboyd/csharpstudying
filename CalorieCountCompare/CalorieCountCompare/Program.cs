@@ -26,13 +26,21 @@ namespace CalorieCountCompare
 
         static void DisplayOrder<T>(T x, T y) where T : IComparable<T>
         {
+            if (x == y) // will not work
+                Console.WriteLine("{0,12} = {1}", x, y);
+            else if (x > y)
+                Console.WriteLine("{0,12} > {1}", x, y);
+            else
+                Console.WriteLine("{0,12} < {1}", x, y);
+            /*
             int result = x.CompareTo(y);
             if (result == 0)
                 Console.WriteLine("{0,12} = {1}", x, y);
             else if (result > 0)
                 Console.WriteLine("{0,12} > {1}", x, y);
             else
-
+                Console.WriteLine("{0,12} < {1}", x, y);
+                */
         }
     }
 }
