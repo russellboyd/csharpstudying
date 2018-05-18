@@ -15,6 +15,13 @@ namespace CompareStringsDemo
             string str1 = "Stra\u00dfe";
             string str2 = "Strasse";
             DisplayAllComparisons(str1, str2);
+
+	    Console.WriteLine();
+	    //a-umlaut is U+00E4
+	    //umlaut (combining diaeresis) is U+0308
+	    str1 = "erkl\u00e4ren";
+	    str2 = "erkla\u0308ren";
+	    DisplayAllComparisons(str1, str2);
         }
 
         static void DisplayAllComparisons(string str1, string str2)
