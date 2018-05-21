@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Equality
 {
@@ -6,11 +10,23 @@ namespace Equality
     {
         static void Main(string[] args)
         {
-            string[] list = {"orange", "banana", "pear", "apple"};
-	    Array.Sort(list);
+            Food banana = new Food("banana");
+            Food banana2 = new Food("banana");
+            Food chocolate = new Food("chocolate");
 
-	    foreach(var item in list)
-	    	Console.WriteLine(item);
+            Console.WriteLine(banana.Equals(null));
+            Console.WriteLine(object.Equals(banana, null));
+            Console.WriteLine(object.Equals(null, banana));
+            Console.WriteLine(object.Equals(null, null));
+
+            Console.WriteLine(banana);
+            Console.WriteLine(banana2);
+
+            Console.WriteLine(banana.Equals((object) banana2));
+            Console.WriteLine(ReferenceEquals(banana, banana2));
+
+
         }
     }
 }
+
