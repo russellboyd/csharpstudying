@@ -14,16 +14,30 @@ namespace Equality
 		new Food("orange",FoodGroup.Fruit),
 		new Food("banana",FoodGroup.Fruit),
 		new Food("pear",FoodGroup.Fruit),
-		new Food("apple",FoodGroup.Fruit)
+		new Food("apple",FoodGroup.Fruit),
+		new CookedFood("baked", "apple", FoodGroup.Fruit),
 		};
 
-		Array.Sort(list);
+		SortAndShowList(list);
 
+		Food[] list2 = {
+		new CookedFood("baked", "apple", FoodGroup.Fruit),
+		new Food("pear", FoodGroup.Fruit),
+		new Food("apple", FoodGroup.Fruit)
+		};
+		
+		Console.WriteLine();
+		SortAndShowList(list2);
+        }
+
+	static void SortAndShowList(Food[] list)
+	{
+		Array.Sort(list, FoodNameComparer.Instance);
+		
 		foreach(var item in list)
 			    Console.WriteLine(item);
-		
 
-        }
+	}
     }
 }
 
