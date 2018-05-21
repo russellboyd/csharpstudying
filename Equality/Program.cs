@@ -10,21 +10,18 @@ namespace Equality
     {
         static void Main(string[] args)
         {
-            Food banana = new Food("banana");
-            Food banana2 = new Food("banana");
-            Food chocolate = new Food("chocolate");
+		Food[] list = {
+		new Food("orange",FoodGroup.Fruit),
+		new Food("banana",FoodGroup.Fruit),
+		new Food("pear",FoodGroup.Fruit),
+		new Food("apple",FoodGroup.Fruit)
+		};
 
-            Console.WriteLine(banana.Equals(null));
-            Console.WriteLine(object.Equals(banana, null));
-            Console.WriteLine(object.Equals(null, banana));
-            Console.WriteLine(object.Equals(null, null));
+		Array.Sort(list);
 
-            Console.WriteLine(banana);
-            Console.WriteLine(banana2);
-
-            Console.WriteLine(banana.Equals((object) banana2));
-            Console.WriteLine(ReferenceEquals(banana, banana2));
-
+		foreach(var item in list)
+			    Console.WriteLine(item);
+		
 
         }
     }
