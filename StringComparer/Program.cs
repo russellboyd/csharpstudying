@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
+using System.Globalization;
 
 namespace StringComparer
 {
@@ -9,7 +11,7 @@ namespace StringComparer
     {
         static void Main(string[] args)
         {
-		var names = new HashSet<string>();
+		var names = new HashSet<string>(StringComparer.CurrentCultureIgnoreCase);
 		names.Add("apple");
 		names.Add("pear");
 		names.Add("pineapple");
