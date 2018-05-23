@@ -21,6 +21,6 @@ namespace StringComparer
 		       Console.WriteLine(name);
 
 		
-	}
+		}
     }
 }
