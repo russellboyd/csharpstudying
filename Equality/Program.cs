@@ -10,6 +10,7 @@ namespace Equality
     {
         static void Main(string[] args)
         {
+		/*
 		Food[] list = {
 		new Food("orange",FoodGroup.Fruit),
 		new Food("banana",FoodGroup.Fruit),
@@ -28,6 +29,17 @@ namespace Equality
 		
 		Console.WriteLine();
 		SortAndShowList(list2);
+		*/
+		
+		//var foodItems = new HashSet<FoodItem>(FoodItemEqualityComparer.Instance);
+		var foodItems = new HashSet<FoodItem>(EqualityComparer<FoodItem>.Default);
+		foodItems.Add(new FoodItem("apple", FoodGroup.Fruit));
+		foodItems.Add(new FoodItem("pear", FoodGroup.Fruit));
+		foodItems.Add(new FoodItem("pineapple", FoodGroup.Fruit));
+		foodItems.Add(new FoodItem("apple", FoodGroup.Fruit));
+
+		foreach(var foodItem in foodItems)
+			    Console.WriteLine(foodItem);
         }
 
 	static void SortAndShowList(Food[] list)
