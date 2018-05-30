@@ -1,28 +1,27 @@
-using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using ACM.BL;
 
 namespace ACM.BLTest
 {
     [TestClass]
-    public class UnitTest1
+    public class CustomerTest
     {
         [TestMethod]
         public void FullNameTestValid()
         {
-		//--Arrange
+		//Arrange
 		Customer customer = new Customer();
 		customer.FirstName = "Bilbo";
 		customer.LastName = "Baggins";
 
 		string expected = "Baggins, Bilbo";
 
-		//--Act
+		//Act
 		string actual = customer.FullName;
-		
-		//--Assert
+
+		//Assert
 		Assert.AreEqual(expected, actual);
-		
-	}
+        }
     }
 }
