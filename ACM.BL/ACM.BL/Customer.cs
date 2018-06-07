@@ -20,6 +20,7 @@ namespace ACM.BL
         public List<Address> AddressList { get; set; }
         public static int InstanceCount { get; set; } 
         private string _lastname;
+
         public string LastName
         {
             get { return _lastname; }
