@@ -18,7 +18,11 @@ namespace ACM.BL
             AddressList = new List<Address>();
         }
         public List<Address> AddressList { get; set; }
-        public static int InstanceCount { get; set; } 
+
+        public int CustomerType { get; set; }
+
+        public static int InstanceCount { get; set; }
+
         private string _lastname;
 
         public string LastName
@@ -74,10 +78,12 @@ namespace ACM.BL
             if (String.IsNullOrWhiteSpace(LastName)) isValid = false;
             if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
 
-            return isValid;
-
-            
+            return isValid;  
         }
 
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }

@@ -18,7 +18,7 @@ namespace ACM.BL
             //Temporary hard coded values to return a populated order
             if (orderId == 10)
             {
-                order.OrderDate = new DateTimeOffset(2014,);
+                order.OrderDate = new DateTimeOffset();
             }
             return order;
         }
