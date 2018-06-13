@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Acme.Common
 {
-    public class StringHandler
+    public static class StringHandler
     {
-        public string InsertSpaces(string source)
+        public string InsertSpaces(this string source)
         {
             string result = string.Empty;
             if (!String.IsNullOrWhiteSpace(source))
@@ -17,10 +17,13 @@ namespace Acme.Common
                 {
                     if (char.IsUpper(letter))
                     {
+                        //Trim any spaces already there
+                        result = result.Trim();
                         result += " ";
                     }
                     result += letter;
                 }
+                result = result.Trim();
             }
 
             return result;
