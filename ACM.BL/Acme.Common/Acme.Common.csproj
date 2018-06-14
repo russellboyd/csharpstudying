@@ -106,6 +106,8 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ILoggable.cs" />
+    <Compile Include="LoggingService.cs" />
     <Compile Include="StringHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Acme.Common.rd.xml" />

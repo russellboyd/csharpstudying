@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
+using Acme.Common;
 
 namespace ACM.BL
 {
-    public class Product : EntityBase 
+    public class Product : EntityBase, ILoggable
     {
         public Product()
         {
@@ -65,6 +66,12 @@ namespace ACM.BL
         public string InsertSpaces()
         {
             var source = ProductName;
+        }
+
+        public string Log()
+        {
+            var logString = this.ProductId + ": " + this.ProductName + " " + "Detail: " + this.ProductDescription + " " + "Status: " + this.EntityState.ToString();
+            return logString;
         }
     }
 }

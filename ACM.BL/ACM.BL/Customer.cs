@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Acme.Common;
 using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    public class Customer
+    public class Customer : EntityBase, ILoggable
     {
         //constructor chaining
         public Customer() : this(0)
@@ -84,6 +85,12 @@ namespace ACM.BL
         public override string ToString()
         {
             return base.ToString();
+        }
+
+        public string Log()
+        {
+            var logString = this.CustomerId + ": " + this.FullName + " " + "Email: " + this.EmailAddress + " " + "Status: " + this.EntityState.ToString();
+            return logString;
         }
     }
 }

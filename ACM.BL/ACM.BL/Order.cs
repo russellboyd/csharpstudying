@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
+using Acme.Common;
 
 namespace ACM.BL
 {
-    public class Order
+    public class Order : EntityBase, ILoggable
     {
         public Order()
         {
@@ -54,6 +55,11 @@ namespace ACM.BL
             return OrderDate.Value.Date + " (" + OrderId + ")";
         }
 
+        public string Log()
+        {
+            var logString = this.OrderId + ": " + "date: " + this.OrderDate.Value.Date + " " + "Status: " + this.EntityState.ToString();
+            return logString;
+        }
 
     }
 }
